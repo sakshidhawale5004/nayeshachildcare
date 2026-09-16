@@ -5,10 +5,10 @@ import * as THREE from "three";
 
 function CareObjects() {
   const group = useRef<THREE.Group>(null);
-  useFrame(({ pointer }, rawDelta) => {
+  useFrame(({ pointer, clock }, rawDelta) => {
     const delta = Math.min(rawDelta, 0.05);
     if (!group.current) return;
-    group.current.rotation.y = THREE.MathUtils.damp(group.current.rotation.y, -0.3 + pointer.x * 0.18, 3, delta);
+    group.current.rotation.y = clock.getElapsedTime() * 0.42 - 0.3 + pointer.x * 0.1;
     group.current.rotation.x = THREE.MathUtils.damp(group.current.rotation.x, 0.12 + pointer.y * 0.12, 4, delta);
   });
 
@@ -17,10 +17,10 @@ function CareObjects() {
       <Float speed={1.15} rotationIntensity={0.22} floatIntensity={0.35}>
         <group>
           <RoundedBox args={[1.15, 3.8, 0.78]} radius={0.45} smoothness={7} castShadow>
-            <meshPhysicalMaterial color="#ef3340" roughness={0.18} metalness={0.04} clearcoat={1} clearcoatRoughness={0.14} />
+            <meshPhysicalMaterial color="#ff7378" roughness={0.2} metalness={0.02} clearcoat={1} clearcoatRoughness={0.16} />
           </RoundedBox>
           <RoundedBox args={[3.8, 1.15, 0.78]} radius={0.45} smoothness={7} castShadow>
-            <meshPhysicalMaterial color="#ef3340" roughness={0.18} metalness={0.04} clearcoat={1} clearcoatRoughness={0.14} />
+            <meshPhysicalMaterial color="#ff7378" roughness={0.2} metalness={0.02} clearcoat={1} clearcoatRoughness={0.16} />
           </RoundedBox>
         </group>
       </Float>
