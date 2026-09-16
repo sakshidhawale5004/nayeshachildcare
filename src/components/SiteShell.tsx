@@ -3,7 +3,7 @@ import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { NayeshaButton } from "./NayeshaButton";
 
-const brandLogo = "/Trust%20%26%20Legacy%20Focus.webp";
+const brandLogo = "/nayesha-logo.webp";
 
 const links = [
   ["/", "Home"], ["/about", "About"], ["/specialties", "Specialties"], ["/doctors", "Doctors"],

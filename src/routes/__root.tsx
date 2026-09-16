@@ -121,6 +121,49 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    const observedReveals = new Set<Element>();
+    let revealObserver: IntersectionObserver | undefined;
+
+    const observeReveals = () => {
+      const elements = document.querySelectorAll<HTMLElement>('.reveal:not(.is-visible)');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach((element) => element.classList.add('is-visible'));
+        return;
+      }
+      revealObserver?.disconnect();
+      revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observedReveals.add(entry.target);
+          revealObserver?.unobserve(entry.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      elements.forEach((element) => {
+        if (!observedReveals.has(element)) revealObserver?.observe(element);
+      });
+    };
+
+    const markImageReady = (image: HTMLImageElement) => {
+      if (image.complete) image.classList.add('image-ready');
+      else image.addEventListener('load', () => image.classList.add('image-ready'), { once: true });
+    };
+
+    observeReveals();
+    document.querySelectorAll<HTMLImageElement>('img').forEach(markImageReady);
+    const mutationObserver = new MutationObserver(() => {
+      observeReveals();
+      document.querySelectorAll<HTMLImageElement>('img:not(.image-ready)').forEach(markImageReady);
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      revealObserver?.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
