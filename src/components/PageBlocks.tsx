@@ -51,7 +51,6 @@ export const images = {
   lifestyleImage,
   homeStoryPlayImage,
   homeCarePhilosophyImage,
-  homeChildrenDifferenceImage,
   aboutGentlerCareImage,
   aboutPlaceDesignedImage,
   aboutCareBuiltImage,
