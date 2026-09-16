@@ -24,7 +24,7 @@
 }
 :root { --background: oklch(0.99 0.004 220); --foreground: oklch(0.2 0.05 248); --card: oklch(1 0 0); --primary: oklch(0.55 0.17 240); --primary-foreground: oklch(1 0 0); --secondary: oklch(0.64 0.2 25); --secondary-foreground: oklch(1 0 0); --muted: oklch(0.95 0.018 225); --muted-foreground: oklch(0.49 0.04 240); --accent: oklch(0.92 0.055 210); --accent-foreground: oklch(0.24 0.06 245); --border: oklch(0.88 0.025 230); --navy: oklch(0.18 0.055 248); --sky: oklch(0.93 0.045 220); --coral: oklch(0.64 0.2 25); }
 * { box-sizing: border-box; border-color: var(--border); }
-html { scroll-behavior: smooth; }
+/* html { scroll-behavior: smooth; } */
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); letter-spacing: 0; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
