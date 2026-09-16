@@ -5,6 +5,24 @@ import doctorImage from "@/assets/doctor-portrait.jpg";
 import checkupImage from "@/assets/checkup-family.jpg";
 import clinicImage from "@/assets/clinic-interior.jpg";
 import lifestyleImage from "@/assets/mother-child.jpg";
+import homeStoryPlayImage from "@/assets/home-story-play.jpg";
+import homeCarePhilosophyImage from "@/assets/home-care-philosophy.jpg";
+import aboutGentlerCareImage from "@/assets/about-gentler-care.jpg";
+import aboutPlaceDesignedImage from "@/assets/about-place-designed.jpg";
+import specialtiesHeroImage from "@/assets/specialties-hero.jpg";
+import specialtiesNewbornsImage from "@/assets/specialties-newborns.jpg";
+import specialtiesSchoolAgeImage from "@/assets/specialties-school-age.jpg";
+import specialtiesAdolescentImage from "@/assets/specialties-adolescent.jpg";
+import doctorsGeneralCareImage from "@/assets/doctors-general-care.jpg";
+import doctorsSpecialistCollaborationImage from "@/assets/doctors-specialist-collaboration.jpg";
+import doctorsCommunicationImage from "@/assets/doctors-communication.jpg";
+import vaccinationPlanImage from "@/assets/vaccination-plan.jpg";
+import vaccinationVisitImage from "@/assets/vaccination-visit.jpg";
+import vaccinationAftercareImage from "@/assets/vaccination-aftercare.jpg";
+import growthHeroImage from "@/assets/growth-hero.jpg";
+import growthMilestonesImage from "@/assets/growth-milestones.jpg";
+import growthNutritionRoutinesImage from "@/assets/growth-nutrition-routines.jpg";
+import growthSleepWellbeingImage from "@/assets/growth-sleep-wellbeing.jpg";
 import diagnosticsHeroImage from "@/assets/diagnostics-hero.jpg";
 import diagnosticsBeforeAssessmentImage from "@/assets/diagnostics-before-assessment.jpg";
 import diagnosticsDuringVisitImage from "@/assets/diagnostics-during-visit.jpg";
@@ -27,6 +45,24 @@ export const images = {
   checkupImage,
   clinicImage,
   lifestyleImage,
+  homeStoryPlayImage,
+  homeCarePhilosophyImage,
+  aboutGentlerCareImage,
+  aboutPlaceDesignedImage,
+  specialtiesHeroImage,
+  specialtiesNewbornsImage,
+  specialtiesSchoolAgeImage,
+  specialtiesAdolescentImage,
+  doctorsGeneralCareImage,
+  doctorsSpecialistCollaborationImage,
+  doctorsCommunicationImage,
+  vaccinationPlanImage,
+  vaccinationVisitImage,
+  vaccinationAftercareImage,
+  growthHeroImage,
+  growthMilestonesImage,
+  growthNutritionRoutinesImage,
+  growthSleepWellbeingImage,
   diagnosticsHeroImage,
   diagnosticsBeforeAssessmentImage,
   diagnosticsDuringVisitImage,
