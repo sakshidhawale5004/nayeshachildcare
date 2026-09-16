@@ -137,4 +137,23 @@ export function ContentPage({ eyebrow, title, intro, image, alt, highlights, sec
   return <><PageHero {...{eyebrow,title,intro,image,alt}} /><section className="highlight-strip section-wrap reveal">{highlights.map((x,i)=><div className={`reveal reveal-delay-${Math.min(i + 1, 4)}`} key={x.title}><b>0{i+1}</b><h3>{x.title}</h3><p>{x.text}</p></div>)}</section><section className="detail-stack section-wrap">{sections.map((s,i)=><article key={s.title} className={i%2 ? "detail-row reverse reveal reveal-delay-1":"detail-row reveal reveal-delay-1"}><div className="detail-visual reveal-delay-2"><img src={visuals?.[i] ?? [childrenImage,checkupImage,clinicImage,lifestyleImage][i%4]} alt="Nayesha pediatric care experience" loading="lazy" decoding="async" width={1408} height={1056} /></div><div className="reveal-delay-3"><Eyebrow>{String(i+1).padStart(2,"0")} · Care detail</Eyebrow><h2>{s.title}</h2><p>{s.text}</p><ul className="check-list">{s.bullets.map(b=><li key={b}>{b}</li>)}</ul></div></article>)}</section><Callout /></>;
 }
 
-export function Callout() { return <section className="callout reveal reveal-delay-1"><div><Eyebrow>Here when you need us</Eyebrow><h2>Let’s make their next visit a positive one.</h2></div><NayeshaButton to="/contact" tone="light">Request an appointment</NayeshaButton></section>; }
+export function Callout() { 
+  return (
+    <section className="callout reveal reveal-delay-1">
+      <div className="floating-dots" aria-hidden="true">
+        <div className="dot" style={{ left: '10%', animationDelay: '0s', width: '20px', height: '20px' }}></div>
+        <div className="dot" style={{ left: '25%', animationDelay: '2s', width: '12px', height: '12px' }}></div>
+        <div className="dot" style={{ left: '45%', animationDelay: '4s', width: '24px', height: '24px' }}></div>
+        <div className="dot" style={{ left: '65%', animationDelay: '1s', width: '16px', height: '16px' }}></div>
+        <div className="dot" style={{ left: '85%', animationDelay: '3s', width: '28px', height: '28px' }}></div>
+      </div>
+      <div className="callout-content">
+        <Eyebrow>Here when you need us</Eyebrow>
+        <h2>Let’s make their next visit a positive one.</h2>
+      </div>
+      <div className="callout-action">
+        <NayeshaButton to="/contact" tone="light">Request an appointment</NayeshaButton>
+      </div>
+    </section>
+  ); 
+}
