@@ -5,10 +5,41 @@ import doctorImage from "@/assets/doctor-portrait.jpg";
 import checkupImage from "@/assets/checkup-family.jpg";
 import clinicImage from "@/assets/clinic-interior.jpg";
 import lifestyleImage from "@/assets/mother-child.jpg";
+import diagnosticsHeroImage from "@/assets/diagnostics-hero.jpg";
+import diagnosticsBeforeAssessmentImage from "@/assets/diagnostics-before-assessment.jpg";
+import diagnosticsDuringVisitImage from "@/assets/diagnostics-during-visit.jpg";
+import diagnosticsResultsImage from "@/assets/diagnostics-results.jpg";
+import resourcesHeroImage from "@/assets/resources-hero.jpg";
+import resourcesFeverIllnessImage from "@/assets/resources-fever-illness.jpg";
+import resourcesFoodSleepImage from "@/assets/resources-food-sleep.jpg";
+import resourcesClinicVisitImage from "@/assets/resources-clinic-visit.jpg";
+import storiesHeroImage from "@/assets/stories-hero.jpg";
+import storiesRoutineImage from "@/assets/stories-routine.jpg";
+import storiesFirstVisitImage from "@/assets/stories-first-visit.jpg";
+import storiesConnectImage from "@/assets/stories-connect.jpg";
 import { NayeshaButton } from "./NayeshaButton";
 import { CareScene } from "./CareScene";
 
-export const images = { heroImage, childrenImage, doctorImage, checkupImage, clinicImage, lifestyleImage };
+export const images = {
+  heroImage,
+  childrenImage,
+  doctorImage,
+  checkupImage,
+  clinicImage,
+  lifestyleImage,
+  diagnosticsHeroImage,
+  diagnosticsBeforeAssessmentImage,
+  diagnosticsDuringVisitImage,
+  diagnosticsResultsImage,
+  resourcesHeroImage,
+  resourcesFeverIllnessImage,
+  resourcesFoodSleepImage,
+  resourcesClinicVisitImage,
+  storiesHeroImage,
+  storiesRoutineImage,
+  storiesFirstVisitImage,
+  storiesConnectImage,
+};
 export const icons = { Activity, Baby, Brain, HeartPulse, Microscope, ShieldCheck, Sparkles, Stethoscope, Syringe, Users };
 
 export function Eyebrow({ children }: { children: React.ReactNode }) { return <p className="eyebrow"><span />{children}</p>; }
@@ -56,8 +87,8 @@ export function PageHero({ eyebrow, title, intro, image, alt }: { eyebrow: strin
   return <section className="page-hero section-wrap"><div><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p><NayeshaButton to="/contact">Talk to our care team</NayeshaButton></div><div className="page-hero-image"><img src={image} alt={alt} width={1408} height={1056} /></div></section>;
 }
 
-export function ContentPage({ eyebrow, title, intro, image, alt, highlights, sections }: { eyebrow:string; title:string; intro:string; image:string; alt:string; highlights:{title:string;text:string}[]; sections:{title:string;text:string;bullets:string[]}[] }) {
-  return <><PageHero {...{eyebrow,title,intro,image,alt}} /><section className="highlight-strip section-wrap">{highlights.map((x,i)=><div key={x.title}><b>0{i+1}</b><h3>{x.title}</h3><p>{x.text}</p></div>)}</section><section className="detail-stack section-wrap">{sections.map((s,i)=><article key={s.title} className={i%2 ? "detail-row reverse":"detail-row"}><div className="detail-visual"><img src={[childrenImage,checkupImage,clinicImage,lifestyleImage][i%4]} alt="Nayesha pediatric care experience" loading="lazy" width={1408} height={1056} /></div><div><Eyebrow>{String(i+1).padStart(2,"0")} · Care detail</Eyebrow><h2>{s.title}</h2><p>{s.text}</p><ul className="check-list">{s.bullets.map(b=><li key={b}>{b}</li>)}</ul></div></article>)}</section><Callout /></>;
+export function ContentPage({ eyebrow, title, intro, image, alt, highlights, sections, visuals }: { eyebrow:string; title:string; intro:string; image:string; alt:string; highlights:{title:string;text:string}[]; sections:{title:string;text:string;bullets:string[]}[]; visuals?: string[] }) {
+  return <><PageHero {...{eyebrow,title,intro,image,alt}} /><section className="highlight-strip section-wrap">{highlights.map((x,i)=><div key={x.title}><b>0{i+1}</b><h3>{x.title}</h3><p>{x.text}</p></div>)}</section><section className="detail-stack section-wrap">{sections.map((s,i)=><article key={s.title} className={i%2 ? "detail-row reverse":"detail-row"}><div className="detail-visual"><img src={visuals?.[i] ?? [childrenImage,checkupImage,clinicImage,lifestyleImage][i%4]} alt="Nayesha pediatric care experience" loading="lazy" width={1408} height={1056} /></div><div><Eyebrow>{String(i+1).padStart(2,"0")} · Care detail</Eyebrow><h2>{s.title}</h2><p>{s.text}</p><ul className="check-list">{s.bullets.map(b=><li key={b}>{b}</li>)}</ul></div></article>)}</section><Callout /></>;
 }
 
 export function Callout() { return <section className="callout"><div><Eyebrow>Here when you need us</Eyebrow><h2>Let’s make their next visit a positive one.</h2></div><NayeshaButton to="/contact" tone="light">Request an appointment</NayeshaButton></section>; }
