@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Lightformer, Environment, RoundedBox } from "@react-three/drei";
+import { Float, Lightformer, Environment, RoundedBox, useTexture } from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
 
@@ -39,12 +39,27 @@ function CareObjects() {
   );
 }
 
+function PatternBackplate() {
+  const texture = useTexture("/3DOBJECT.jpg");
+  texture.colorSpace = THREE.SRGBColorSpace;
+
+  return (
+    <Float speed={0.55} rotationIntensity={0.08} floatIntensity={0.16}>
+      <mesh position={[0, -0.35, -1.6]} rotation={[0.04, -0.12, -0.05]}>
+        <planeGeometry args={[7.4, 3.7]} />
+        <meshBasicMaterial map={texture} transparent opacity={0.7} depthWrite={false} />
+      </mesh>
+    </Float>
+  );
+}
+
 export function CareScene() {
   return (
     <div className="care-scene" aria-hidden="true">
       <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 9], fov: 38 }} gl={{ antialias: true, alpha: true }} shadows>
         <ambientLight intensity={0.85} />
         <directionalLight position={[5, 7, 5]} intensity={2.4} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} />
+        <PatternBackplate />
         <CareObjects />
         <Environment>
           <Lightformer intensity={2.5} position={[0, 6, 2]} scale={[8, 2, 1]} />
