@@ -130,7 +130,7 @@ export function HomePage() {
 export function LinkArrow({ to }: { to: "/specialties" }) { return <a href={to} className="text-link">Learn more <span>↗</span></a>; }
 
 export function PageHero({ eyebrow, title, intro, image, alt }: { eyebrow: string; title: string; intro: string; image: string; alt: string }) {
-  return <section className="page-hero section-wrap reveal"><div className="reveal-delay-1"><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p><NayeshaButton to="/contact">Talk to our care team</NayeshaButton></div><div className="page-hero-image reveal-delay-2"><img src={image} alt={alt} loading="eager" fetchPriority="high" decoding="async" width={1408} height={1056} /></div></section>;
+  return <section className="page-hero section-wrap reveal"><div className="reveal-delay-1"><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{intro}</p><NayeshaButton to="/contact">Talk to our care team</NayeshaButton></div><div className="page-hero-visual reveal-delay-2"><div className="page-hero-image"><img src={image} alt={alt} loading="eager" fetchPriority="high" decoding="async" width={1408} height={1056} /></div><div className="page-hero-3d"><CareScene /></div></div></section>;
 }
 
 export function ContentPage({ eyebrow, title, intro, image, alt, highlights, sections, visuals }: { eyebrow:string; title:string; intro:string; image:string; alt:string; highlights:{title:string;text:string}[]; sections:{title:string;text:string;bullets:string[]}[]; visuals?: string[] }) {

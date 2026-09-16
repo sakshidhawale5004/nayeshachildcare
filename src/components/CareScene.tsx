@@ -8,8 +8,8 @@ function CareObjects() {
   useFrame(({ pointer }, rawDelta) => {
     const delta = Math.min(rawDelta, 0.05);
     if (!group.current) return;
-    group.current.rotation.y += delta * 0.18;
-    group.current.rotation.x = THREE.MathUtils.damp(group.current.rotation.x, pointer.y * 0.12, 4, delta);
+    group.current.rotation.y = THREE.MathUtils.damp(group.current.rotation.y, -0.3 + pointer.x * 0.18, 3, delta);
+    group.current.rotation.x = THREE.MathUtils.damp(group.current.rotation.x, 0.12 + pointer.y * 0.12, 4, delta);
   });
 
   return (
