@@ -9,6 +9,8 @@ import homeStoryPlayImage from "@/assets/home-story-play.jpg";
 import homeCarePhilosophyImage from "@/assets/home-care-philosophy.jpg";
 import aboutGentlerCareImage from "@/assets/about-gentler-care.jpg";
 import aboutPlaceDesignedImage from "@/assets/about-place-designed.jpg";
+import aboutCareBuiltImage from "@/assets/about-care-built.jpg";
+import aboutStandardsTrustImage from "@/assets/about-standards-trust.jpg";
 import specialtiesHeroImage from "@/assets/specialties-hero.jpg";
 import specialtiesNewbornsImage from "@/assets/specialties-newborns.jpg";
 import specialtiesSchoolAgeImage from "@/assets/specialties-school-age.jpg";
@@ -16,9 +18,11 @@ import specialtiesAdolescentImage from "@/assets/specialties-adolescent.jpg";
 import doctorsGeneralCareImage from "@/assets/doctors-general-care.jpg";
 import doctorsSpecialistCollaborationImage from "@/assets/doctors-specialist-collaboration.jpg";
 import doctorsCommunicationImage from "@/assets/doctors-communication.jpg";
+import doctorsExpertiseComfortImage from "@/assets/doctors-expertise-comfort.jpg";
 import vaccinationPlanImage from "@/assets/vaccination-plan.jpg";
 import vaccinationVisitImage from "@/assets/vaccination-visit.jpg";
 import vaccinationAftercareImage from "@/assets/vaccination-aftercare.jpg";
+import vaccinationProtectionClarityImage from "@/assets/vaccination-protection-clarity.jpg";
 import growthHeroImage from "@/assets/growth-hero.jpg";
 import growthMilestonesImage from "@/assets/growth-milestones.jpg";
 import growthNutritionRoutinesImage from "@/assets/growth-nutrition-routines.jpg";
@@ -47,8 +51,11 @@ export const images = {
   lifestyleImage,
   homeStoryPlayImage,
   homeCarePhilosophyImage,
+  homeChildrenDifferenceImage,
   aboutGentlerCareImage,
   aboutPlaceDesignedImage,
+  aboutCareBuiltImage,
+  aboutStandardsTrustImage,
   specialtiesHeroImage,
   specialtiesNewbornsImage,
   specialtiesSchoolAgeImage,
@@ -56,9 +63,11 @@ export const images = {
   doctorsGeneralCareImage,
   doctorsSpecialistCollaborationImage,
   doctorsCommunicationImage,
+  doctorsExpertiseComfortImage,
   vaccinationPlanImage,
   vaccinationVisitImage,
   vaccinationAftercareImage,
+  vaccinationProtectionClarityImage,
   growthHeroImage,
   growthMilestonesImage,
   growthNutritionRoutinesImage,
