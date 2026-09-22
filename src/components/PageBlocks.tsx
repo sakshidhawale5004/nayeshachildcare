@@ -94,8 +94,16 @@ export function HomePage() {
   const services = [
     { icon: Baby, title: "Newborn & infant care", text: "Feeding, growth, sleep and newborn follow-ups with calm, practical guidance." },
     { icon: Syringe, title: "Vaccination planning", text: "Clear, age-appropriate immunization support with time for every parent question." },
-    { icon: Brain, title: "Growth & development", text: "Developmental screening and support built around each child’s individual pace." },
+    { icon: Brain, title: "Growth & development", text: "Developmental screening and support built around each child's individual pace." },
     { icon: HeartPulse, title: "Acute & ongoing care", text: "Thoughtful assessment for everyday illness and coordinated care for longer needs." },
+  ];
+  const therapyServices = [
+    { icon: Brain, title: "Autism Therapy", text: "Comprehensive autism assessment and evidence-based therapy supporting your child's unique strengths.", link: "/autism-therapy" },
+    { icon: Sparkles, title: "Speech Therapy", text: "Pediatric speech and language therapy for clear, confident communication.", link: "/speech-therapy" },
+    { icon: Activity, title: "Occupational Therapy", text: "Skill development for daily living, motor coordination, and sensory processing.", link: "/occupational-therapy" },
+    { icon: Users, title: "ABA Therapy", text: "Applied Behavior Analysis using positive reinforcement for skill building.", link: "/aba-therapy" },
+    { icon: ShieldCheck, title: "Behavioral Therapy", text: "Emotional regulation and positive behavior support for healthy development.", link: "/behavioral-therapy" },
+    { icon: Microscope, title: "Psychological Counseling", text: "Compassionate, evidence-based counseling for emotional wellbeing and resilience.", link: "/psychological-counseling" },
   ];
   return <>
     <section className="home-hero reveal">
@@ -122,7 +130,11 @@ export function HomePage() {
       <div className="doctor-inner section-wrap"><div><Eyebrow>Meet your care team</Eyebrow><h2>Clinical expertise.<br /><em>Genuinely warm care.</em></h2><p>Our pediatric specialists combine careful listening, collaborative decisions and clear follow-through.</p><NayeshaButton to="/doctors" tone="light">Meet the team</NayeshaButton></div><img src={doctorImage} alt="A warm and experienced pediatrician" loading="lazy" decoding="async" width={1200} height={1408} /></div>
     </section>
     <section className="journey section-wrap reveal reveal-delay-1"><Eyebrow>Your visit, made easier</Eyebrow><h2>Know what comes next.</h2><div className="journey-grid">{["Tell us what you need", "Meet your pediatrician", "Leave with a clear plan"].map((x,i)=><div className={`reveal reveal-delay-${Math.min(i + 1, 4)}`} key={x}><b>0{i+1}</b><h3>{x}</h3><p>{["Choose a visit and share the concerns you want us to understand.","We listen, examine gently and explain what we see in everyday language.","You receive practical next steps and coordinated follow-up when needed."][i]}</p></div>)}</div></section>
-    <section className="quote-section section-wrap reveal reveal-delay-1"><img src={lifestyleImage} alt="Mother and young son walking together in a park" loading="lazy" decoding="async" width={1408} height={1056} /><blockquote>“The best pediatric care doesn’t only treat a symptom. It helps a family feel informed, capable and supported.”<cite>Nayesha care philosophy</cite></blockquote></section>
+    <section className="quote-section section-wrap reveal reveal-delay-1"><img src={lifestyleImage} alt="Mother and young son walking together in a park" loading="lazy" decoding="async" width={1408} height={1056} /><blockquote>"The best pediatric care doesn't only treat a symptom. It helps a family feel informed, capable and supported."<cite>Nayesha care philosophy</cite></blockquote></section>
+    <section className="therapy-services section-wrap reveal reveal-delay-1">
+      <div className="section-heading"><div><Eyebrow>Specialized therapy services</Eyebrow><h2>Comprehensive support beyond primary care.</h2></div><p>When children need specialized therapy support, our team of certified therapists provides evidence-based services tailored to each child's unique needs.</p></div>
+      <div className="service-grid">{therapyServices.map(({ icon: Icon, title, text, link }, i) => <article className={`service-card reveal reveal-delay-${Math.min(i + 1, 4)}`} key={title}><span className="service-number">0{i + 1}</span><Icon /><h3>{title}</h3><p>{text}</p><a href={link} className="text-link">Learn more <span>↗</span></a></article>)}</div>
+    </section>
     <Callout />
   </>;
 }
@@ -149,7 +161,7 @@ export function Callout() {
       </div>
       <div className="callout-content">
         <Eyebrow>Here when you need us</Eyebrow>
-        <h2>Let’s make their next visit a positive one.</h2>
+        <h2>Let's make their next visit a positive one.</h2>
       </div>
       <div className="callout-action">
         <NayeshaButton to="/contact" tone="light">Request an appointment</NayeshaButton>

@@ -10,13 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AbaTherapyRouteImport } from './routes/aba-therapy'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AutismTherapyRouteImport } from './routes/autism-therapy'
+import { Route as BehavioralTherapyRouteImport } from './routes/behavioral-therapy'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DanceTherapyRouteImport } from './routes/dance-therapy'
 import { Route as DiagnosticsRouteImport } from './routes/diagnostics'
 import { Route as DoctorsRouteImport } from './routes/doctors'
 import { Route as GrowthDevelopmentRouteImport } from './routes/growth-development'
+import { Route as OccupationalTherapyRouteImport } from './routes/occupational-therapy'
+import { Route as PsychologicalCounselingRouteImport } from './routes/psychological-counseling'
 import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as SpecialEducationRouteImport } from './routes/special-education'
 import { Route as SpecialtiesRouteImport } from './routes/specialties'
+import { Route as SpeechTherapyRouteImport } from './routes/speech-therapy'
 import { Route as StoriesRouteImport } from './routes/stories'
 import { Route as VaccinationRouteImport } from './routes/vaccination'
 
@@ -25,14 +33,34 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AbaTherapyRoute = AbaTherapyRouteImport.update({
+  id: '/aba-therapy',
+  path: '/aba-therapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutismTherapyRoute = AutismTherapyRouteImport.update({
+  id: '/autism-therapy',
+  path: '/autism-therapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BehavioralTherapyRoute = BehavioralTherapyRouteImport.update({
+  id: '/behavioral-therapy',
+  path: '/behavioral-therapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DanceTherapyRoute = DanceTherapyRouteImport.update({
+  id: '/dance-therapy',
+  path: '/dance-therapy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DiagnosticsRoute = DiagnosticsRouteImport.update({
@@ -50,14 +78,34 @@ const GrowthDevelopmentRoute = GrowthDevelopmentRouteImport.update({
   path: '/growth-development',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OccupationalTherapyRoute = OccupationalTherapyRouteImport.update({
+  id: '/occupational-therapy',
+  path: '/occupational-therapy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PsychologicalCounselingRoute = PsychologicalCounselingRouteImport.update({
+  id: '/psychological-counseling',
+  path: '/psychological-counseling',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SpecialEducationRoute = SpecialEducationRouteImport.update({
+  id: '/special-education',
+  path: '/special-education',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SpecialtiesRoute = SpecialtiesRouteImport.update({
   id: '/specialties',
   path: '/specialties',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpeechTherapyRoute = SpeechTherapyRouteImport.update({
+  id: '/speech-therapy',
+  path: '/speech-therapy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StoriesRoute = StoriesRouteImport.update({
@@ -73,38 +121,62 @@ const VaccinationRoute = VaccinationRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aba-therapy': typeof AbaTherapyRoute
   '/about': typeof AboutRoute
+  '/autism-therapy': typeof AutismTherapyRoute
+  '/behavioral-therapy': typeof BehavioralTherapyRoute
   '/contact': typeof ContactRoute
+  '/dance-therapy': typeof DanceTherapyRoute
   '/diagnostics': typeof DiagnosticsRoute
   '/doctors': typeof DoctorsRoute
   '/growth-development': typeof GrowthDevelopmentRoute
+  '/occupational-therapy': typeof OccupationalTherapyRoute
+  '/psychological-counseling': typeof PsychologicalCounselingRoute
   '/resources': typeof ResourcesRoute
+  '/special-education': typeof SpecialEducationRoute
   '/specialties': typeof SpecialtiesRoute
+  '/speech-therapy': typeof SpeechTherapyRoute
   '/stories': typeof StoriesRoute
   '/vaccination': typeof VaccinationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aba-therapy': typeof AbaTherapyRoute
   '/about': typeof AboutRoute
+  '/autism-therapy': typeof AutismTherapyRoute
+  '/behavioral-therapy': typeof BehavioralTherapyRoute
   '/contact': typeof ContactRoute
+  '/dance-therapy': typeof DanceTherapyRoute
   '/diagnostics': typeof DiagnosticsRoute
   '/doctors': typeof DoctorsRoute
   '/growth-development': typeof GrowthDevelopmentRoute
+  '/occupational-therapy': typeof OccupationalTherapyRoute
+  '/psychological-counseling': typeof PsychologicalCounselingRoute
   '/resources': typeof ResourcesRoute
+  '/special-education': typeof SpecialEducationRoute
   '/specialties': typeof SpecialtiesRoute
+  '/speech-therapy': typeof SpeechTherapyRoute
   '/stories': typeof StoriesRoute
   '/vaccination': typeof VaccinationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aba-therapy': typeof AbaTherapyRoute
   '/about': typeof AboutRoute
+  '/autism-therapy': typeof AutismTherapyRoute
+  '/behavioral-therapy': typeof BehavioralTherapyRoute
   '/contact': typeof ContactRoute
+  '/dance-therapy': typeof DanceTherapyRoute
   '/diagnostics': typeof DiagnosticsRoute
   '/doctors': typeof DoctorsRoute
   '/growth-development': typeof GrowthDevelopmentRoute
+  '/occupational-therapy': typeof OccupationalTherapyRoute
+  '/psychological-counseling': typeof PsychologicalCounselingRoute
   '/resources': typeof ResourcesRoute
+  '/special-education': typeof SpecialEducationRoute
   '/specialties': typeof SpecialtiesRoute
+  '/speech-therapy': typeof SpeechTherapyRoute
   '/stories': typeof StoriesRoute
   '/vaccination': typeof VaccinationRoute
 }
@@ -112,50 +184,82 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aba-therapy'
     | '/about'
+    | '/autism-therapy'
+    | '/behavioral-therapy'
     | '/contact'
+    | '/dance-therapy'
     | '/diagnostics'
     | '/doctors'
     | '/growth-development'
+    | '/occupational-therapy'
+    | '/psychological-counseling'
     | '/resources'
+    | '/special-education'
     | '/specialties'
+    | '/speech-therapy'
     | '/stories'
     | '/vaccination'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/aba-therapy'
     | '/about'
+    | '/autism-therapy'
+    | '/behavioral-therapy'
     | '/contact'
+    | '/dance-therapy'
     | '/diagnostics'
     | '/doctors'
     | '/growth-development'
+    | '/occupational-therapy'
+    | '/psychological-counseling'
     | '/resources'
+    | '/special-education'
     | '/specialties'
+    | '/speech-therapy'
     | '/stories'
     | '/vaccination'
   id:
     | '__root__'
     | '/'
+    | '/aba-therapy'
     | '/about'
+    | '/autism-therapy'
+    | '/behavioral-therapy'
     | '/contact'
+    | '/dance-therapy'
     | '/diagnostics'
     | '/doctors'
     | '/growth-development'
+    | '/occupational-therapy'
+    | '/psychological-counseling'
     | '/resources'
+    | '/special-education'
     | '/specialties'
+    | '/speech-therapy'
     | '/stories'
     | '/vaccination'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AbaTherapyRoute: typeof AbaTherapyRoute
   AboutRoute: typeof AboutRoute
+  AutismTherapyRoute: typeof AutismTherapyRoute
+  BehavioralTherapyRoute: typeof BehavioralTherapyRoute
   ContactRoute: typeof ContactRoute
+  DanceTherapyRoute: typeof DanceTherapyRoute
   DiagnosticsRoute: typeof DiagnosticsRoute
   DoctorsRoute: typeof DoctorsRoute
   GrowthDevelopmentRoute: typeof GrowthDevelopmentRoute
+  OccupationalTherapyRoute: typeof OccupationalTherapyRoute
+  PsychologicalCounselingRoute: typeof PsychologicalCounselingRoute
   ResourcesRoute: typeof ResourcesRoute
+  SpecialEducationRoute: typeof SpecialEducationRoute
   SpecialtiesRoute: typeof SpecialtiesRoute
+  SpeechTherapyRoute: typeof SpeechTherapyRoute
   StoriesRoute: typeof StoriesRoute
   VaccinationRoute: typeof VaccinationRoute
 }
@@ -169,6 +273,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aba-therapy': {
+      id: '/aba-therapy'
+      path: '/aba-therapy'
+      fullPath: '/aba-therapy'
+      preLoaderRoute: typeof AbaTherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -176,11 +287,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/autism-therapy': {
+      id: '/autism-therapy'
+      path: '/autism-therapy'
+      fullPath: '/autism-therapy'
+      preLoaderRoute: typeof AutismTherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/behavioral-therapy': {
+      id: '/behavioral-therapy'
+      path: '/behavioral-therapy'
+      fullPath: '/behavioral-therapy'
+      preLoaderRoute: typeof BehavioralTherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dance-therapy': {
+      id: '/dance-therapy'
+      path: '/dance-therapy'
+      fullPath: '/dance-therapy'
+      preLoaderRoute: typeof DanceTherapyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/diagnostics': {
@@ -204,6 +336,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GrowthDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/occupational-therapy': {
+      id: '/occupational-therapy'
+      path: '/occupational-therapy'
+      fullPath: '/occupational-therapy'
+      preLoaderRoute: typeof OccupationalTherapyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/psychological-counseling': {
+      id: '/psychological-counseling'
+      path: '/psychological-counseling'
+      fullPath: '/psychological-counseling'
+      preLoaderRoute: typeof PsychologicalCounselingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/resources': {
       id: '/resources'
       path: '/resources'
@@ -211,11 +357,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/special-education': {
+      id: '/special-education'
+      path: '/special-education'
+      fullPath: '/special-education'
+      preLoaderRoute: typeof SpecialEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/specialties': {
       id: '/specialties'
       path: '/specialties'
       fullPath: '/specialties'
       preLoaderRoute: typeof SpecialtiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/speech-therapy': {
+      id: '/speech-therapy'
+      path: '/speech-therapy'
+      fullPath: '/speech-therapy'
+      preLoaderRoute: typeof SpeechTherapyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/stories': {
@@ -237,13 +397,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AbaTherapyRoute: AbaTherapyRoute,
   AboutRoute: AboutRoute,
+  AutismTherapyRoute: AutismTherapyRoute,
+  BehavioralTherapyRoute: BehavioralTherapyRoute,
   ContactRoute: ContactRoute,
+  DanceTherapyRoute: DanceTherapyRoute,
   DiagnosticsRoute: DiagnosticsRoute,
   DoctorsRoute: DoctorsRoute,
   GrowthDevelopmentRoute: GrowthDevelopmentRoute,
+  OccupationalTherapyRoute: OccupationalTherapyRoute,
+  PsychologicalCounselingRoute: PsychologicalCounselingRoute,
   ResourcesRoute: ResourcesRoute,
+  SpecialEducationRoute: SpecialEducationRoute,
   SpecialtiesRoute: SpecialtiesRoute,
+  SpeechTherapyRoute: SpeechTherapyRoute,
   StoriesRoute: StoriesRoute,
   VaccinationRoute: VaccinationRoute,
 }
