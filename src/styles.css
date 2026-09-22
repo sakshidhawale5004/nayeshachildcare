@@ -87,7 +87,8 @@ button, input, select, textarea { font: inherit; }
 .mobile-nav{position:fixed;inset:116px 0 auto 0;z-index:60;background:var(--background);padding:24px;display:grid;gap:18px;border-bottom:1px solid var(--border)}
 /* ── Services mega-panel dropdown ── */
 .nav-dropdown{position:relative}
-.dropdown-chevron{transition:transform .2s ease;vertical-align:middle}
+.dropdown-toggle{background:none;border:none;padding:0;cursor:pointer;display:flex;align-items:center;gap:4px;font-family:inherit;}
+.dropdown-chevron{transition:transform .2s ease;flex:none;}
 .dropdown-chevron.open{transform:rotate(180deg)}
 .services-panel{position:absolute;left:50%;top:calc(100% + 18px);transform:translateX(-50%);width:min(860px,90vw);background:var(--card);border:1px solid var(--border);border-radius:8px;box-shadow:0 16px 48px color-mix(in oklab,var(--navy) 18%,transparent);z-index:100;pointer-events:none;opacity:0;transform:translateX(-50%) translateY(-8px);transition:opacity .2s ease,transform .2s ease}
 .services-panel--visible{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
