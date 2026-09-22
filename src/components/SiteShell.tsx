@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, Phone, X, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NayeshaButton } from "./NayeshaButton";
 
 const brandLogo = "/nayesha-logo.webp";
@@ -40,6 +40,18 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = useRouterState({ select: (state) => state.location.pathname });
 
+  // Close services dropdown when clicking outside
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    if (servicesOpen) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [servicesOpen]);
+
   const isServiceActive = serviceLinks.some(({ path }) => pathname === path);
 
   return (
@@ -63,13 +75,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </Link>
           ))}
 
-          {/* Services dropdown — positioned right after About */}
-          <div
-            className="nav-dropdown"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <button className={`nav-link dropdown-toggle ${isServiceActive ? "active" : ""}`}>
+          {/* Services dropdown */}
+          <div className="nav-dropdown" ref={dropdownRef}>
+            <button 
+              className={`nav-link dropdown-toggle ${isServiceActive ? "active" : ""}`}
+              onClick={() => setServicesOpen(!servicesOpen)}
+            >
               Services <ChevronDown size={14} className={`dropdown-chevron ${servicesOpen ? "open" : ""}`} />
             </button>
 
