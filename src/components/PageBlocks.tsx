@@ -125,7 +125,7 @@ export function HomePage() {
   return (
     <>
       {/* ── HERO (Pinnacle Blooms style: full-viewport, bold overlay text) ── */}
-      <section className="pb-hero reveal">
+      <section className="pb-hero">
         <img
           className="pb-hero-bg"
           src={heroImage}

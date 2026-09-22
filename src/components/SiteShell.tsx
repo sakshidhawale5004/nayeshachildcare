@@ -141,7 +141,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </nav>
       )}
 
-      <main>{children}</main>
+      <main style={{ minHeight: "100svh" }}>{children}</main>
 
       <footer className="site-footer">
         <div className="footer-lead">
