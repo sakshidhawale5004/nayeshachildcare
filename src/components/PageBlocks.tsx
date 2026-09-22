@@ -40,7 +40,8 @@ import storiesRoutineImage from "@/assets/stories-routine.jpg";
 import storiesFirstVisitImage from "@/assets/stories-first-visit.jpg";
 import storiesConnectImage from "@/assets/stories-connect.jpg";
 import { NayeshaButton } from "./NayeshaButton";
-import { CareScene } from "./CareScene";
+import { lazy, Suspense } from "react";
+const CareScene = lazy(() => import("./CareScene").then(m => ({ default: m.CareScene })));
 
 const homeChildrenDifferenceImage = "/New folder/Children feel the difference when care feels like play..jpg";
 
@@ -127,13 +128,12 @@ export function HomePage() {
       {/* ── HERO (Pinnacle Blooms style: full-viewport, bold overlay text) ── */}
       <section className="pb-hero">
         <img
-          className="pb-hero-bg"
+          className="pb-hero-bg image-ready"
           src={heroImage}
           alt="Nayesha child healthcare"
           width={1920}
           height={1152}
-          fetchPriority="high"
-          decoding="async"
+          decoding="sync"
         />
         <div className="pb-hero-overlay" />
         <div className="pb-hero-content section-wrap">
@@ -156,7 +156,9 @@ export function HomePage() {
           </div>
         </div>
         <div className="pb-hero-scene">
-          <CareScene />
+          <Suspense fallback={null}>
+            <CareScene />
+          </Suspense>
         </div>
       </section>
 
@@ -320,7 +322,7 @@ export function PageHero({ eyebrow, title, intro, image, alt }: { eyebrow: strin
         <div className="page-hero-image">
           <img src={image} alt={alt} loading="eager" fetchPriority="high" decoding="async" width={1408} height={1056} />
         </div>
-        <div className="page-hero-3d"><CareScene /></div>
+        <div className="page-hero-3d"><Suspense fallback={null}><CareScene /></Suspense></div>
       </div>
     </section>
   );
