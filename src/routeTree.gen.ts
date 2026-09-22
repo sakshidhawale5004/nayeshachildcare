@@ -23,7 +23,7 @@ import { Route as OccupationalTherapyRouteImport } from './routes/occupational-t
 import { Route as PsychologicalCounselingRouteImport } from './routes/psychological-counseling'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as SpecialEducationRouteImport } from './routes/special-education'
-import { Route as SpecialtiesRouteImport } from './routes/specialties'
+
 import { Route as SpeechTherapyRouteImport } from './routes/speech-therapy'
 import { Route as StoriesRouteImport } from './routes/stories'
 import { Route as VaccinationRouteImport } from './routes/vaccination'
@@ -98,11 +98,6 @@ const SpecialEducationRoute = SpecialEducationRouteImport.update({
   path: '/special-education',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SpecialtiesRoute = SpecialtiesRouteImport.update({
-  id: '/specialties',
-  path: '/specialties',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SpeechTherapyRoute = SpeechTherapyRouteImport.update({
   id: '/speech-therapy',
   path: '/speech-therapy',
@@ -134,7 +129,6 @@ export interface FileRoutesByFullPath {
   '/psychological-counseling': typeof PsychologicalCounselingRoute
   '/resources': typeof ResourcesRoute
   '/special-education': typeof SpecialEducationRoute
-  '/specialties': typeof SpecialtiesRoute
   '/speech-therapy': typeof SpeechTherapyRoute
   '/stories': typeof StoriesRoute
   '/vaccination': typeof VaccinationRoute
@@ -154,7 +148,6 @@ export interface FileRoutesByTo {
   '/psychological-counseling': typeof PsychologicalCounselingRoute
   '/resources': typeof ResourcesRoute
   '/special-education': typeof SpecialEducationRoute
-  '/specialties': typeof SpecialtiesRoute
   '/speech-therapy': typeof SpeechTherapyRoute
   '/stories': typeof StoriesRoute
   '/vaccination': typeof VaccinationRoute
@@ -175,7 +168,6 @@ export interface FileRoutesById {
   '/psychological-counseling': typeof PsychologicalCounselingRoute
   '/resources': typeof ResourcesRoute
   '/special-education': typeof SpecialEducationRoute
-  '/specialties': typeof SpecialtiesRoute
   '/speech-therapy': typeof SpeechTherapyRoute
   '/stories': typeof StoriesRoute
   '/vaccination': typeof VaccinationRoute
@@ -197,7 +189,6 @@ export interface FileRouteTypes {
     | '/psychological-counseling'
     | '/resources'
     | '/special-education'
-    | '/specialties'
     | '/speech-therapy'
     | '/stories'
     | '/vaccination'
@@ -217,7 +208,6 @@ export interface FileRouteTypes {
     | '/psychological-counseling'
     | '/resources'
     | '/special-education'
-    | '/specialties'
     | '/speech-therapy'
     | '/stories'
     | '/vaccination'
@@ -237,7 +227,6 @@ export interface FileRouteTypes {
     | '/psychological-counseling'
     | '/resources'
     | '/special-education'
-    | '/specialties'
     | '/speech-therapy'
     | '/stories'
     | '/vaccination'
@@ -258,7 +247,6 @@ export interface RootRouteChildren {
   PsychologicalCounselingRoute: typeof PsychologicalCounselingRoute
   ResourcesRoute: typeof ResourcesRoute
   SpecialEducationRoute: typeof SpecialEducationRoute
-  SpecialtiesRoute: typeof SpecialtiesRoute
   SpeechTherapyRoute: typeof SpeechTherapyRoute
   StoriesRoute: typeof StoriesRoute
   VaccinationRoute: typeof VaccinationRoute
@@ -364,13 +352,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SpecialEducationRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/specialties': {
-      id: '/specialties'
-      path: '/specialties'
-      fullPath: '/specialties'
-      preLoaderRoute: typeof SpecialtiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/speech-therapy': {
       id: '/speech-therapy'
       path: '/speech-therapy'
@@ -410,7 +391,6 @@ const rootRouteChildren: RootRouteChildren = {
   PsychologicalCounselingRoute: PsychologicalCounselingRoute,
   ResourcesRoute: ResourcesRoute,
   SpecialEducationRoute: SpecialEducationRoute,
-  SpecialtiesRoute: SpecialtiesRoute,
   SpeechTherapyRoute: SpeechTherapyRoute,
   StoriesRoute: StoriesRoute,
   VaccinationRoute: VaccinationRoute,

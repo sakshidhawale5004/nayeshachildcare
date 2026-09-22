@@ -13,7 +13,6 @@ const beforeServiceLinks = [
 
 /** Links shown AFTER the Services dropdown */
 const afterServiceLinks = [
-  ["/specialties", "Specialties"],
   ["/doctors", "Doctors"],
   ["/vaccination", "Vaccination"],
   ["/growth-development", "Growth"],
@@ -92,7 +91,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   ))}
                 </ul>
                 <div className="services-panel-footer">
-                  <NayeshaButton to="/specialties">See all specialties</NayeshaButton>
+                  <NayeshaButton to="/autism-therapy">Explore all therapy services</NayeshaButton>
                 </div>
               </div>
             </div>
