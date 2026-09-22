@@ -17,14 +17,18 @@ export const Route = createFileRoute("/autism-therapy")({
       eyebrow="Specialized support"
       title="Autism therapy tailored to your child."
       intro="We provide comprehensive autism assessment and therapy designed to support your child's unique strengths and needs with family-centered care."
-      image={images.specialtiesHeroImage}
+      image="/services/Autism therapy tailored to your child..jpg"
       alt="Child receiving specialized autism therapy support"
       highlights={[
         { title: "Early identification", text: "Thorough developmental screening to identify needs early." },
         { title: "Evidence-based approach", text: "Proven therapies adapted to your child's individual pace." },
         { title: "Family partnership", text: "Therapy that extends into everyday life with practical parent guidance." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/Comprehensive assessment.jpg",
+        "/services/Individualized therapy plans.jpg",
+        "/services/autism tHERAPY Family support and training.jpg"
+      ]}
       sections={[
         {
           title: "Comprehensive assessment",

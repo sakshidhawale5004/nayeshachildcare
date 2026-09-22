@@ -17,14 +17,18 @@ export const Route = createFileRoute("/aba-therapy")({
       eyebrow="Behavioral therapy"
       title="ABA therapy for skill building."
       intro="Applied Behavior Analysis (ABA) is an evidence-based approach that uses positive reinforcement to help children develop new skills and reduce challenging behaviors."
-      image={images.specialtiesHeroImage}
+      image="/services/ABA therapy for skill building..jpg"
       alt="Child engaged in ABA therapy session"
       highlights={[
         { title: "Skill development", text: "Build communication, social, and daily living skills progressively." },
         { title: "Positive reinforcement", text: "Motivation-based learning that celebrates your child's progress." },
         { title: "Measurable outcomes", text: "Clear tracking of goals and regular progress updates." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/ABA THERAPY Individualized treatment.jpg",
+        "/services/ABA therapy One-on-one sessions.jpg",
+        "/services/ABA THERAPY Family involvement and carryover.jpg"
+      ]}
       sections={[
         {
           title: "Individualized treatment",

@@ -17,14 +17,18 @@ export const Route = createFileRoute("/occupational-therapy")({
       eyebrow="Daily living skills"
       title="Occupational therapy for independence."
       intro="Occupational therapy helps children develop the skills they need for everyday activities—from self-care to play to learning—building confidence and independence."
-      image={images.specialtiesHeroImage}
+      image="/services/Occupational therapy for independence..jpg"
       alt="Child engaged in occupational therapy activity"
       highlights={[
         { title: "Motor skill development", text: "Fine and gross motor skills for play, writing, and movement." },
         { title: "Sensory integration", text: "Support for processing and responding to sensory information." },
         { title: "Daily living skills", text: "Self-care, feeding, dressing, and school readiness." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/occupational therapy Occupational assessment.jpg",
+        "/services/occupational therapy Skill-building therapy.jpg",
+        "/services/occupational therapy Home and school support for children.jpg"
+      ]}
       sections={[
         {
           title: "Occupational assessment",

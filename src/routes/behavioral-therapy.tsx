@@ -17,14 +17,18 @@ export const Route = createFileRoute("/behavioral-therapy")({
       eyebrow="Behavior support"
       title="Behavioral therapy for positive change."
       intro="Our behavioral therapists help children develop positive behaviors, emotional regulation skills, and healthy responses through evidence-based intervention strategies."
-      image={images.specialtiesHeroImage}
+      image="/services/Behavioral therapy for positive change..jpg"
       alt="Therapist working with child on behavior strategies"
       highlights={[
         { title: "Behavior assessment", text: "Understanding the root causes and patterns of behavior." },
         { title: "Positive reinforcement", text: "Building confidence through success and encouragement." },
         { title: "Skill development", text: "Teaching alternatives and healthy emotional responses." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/behavioral therapy Functional behavior analysis.jpg",
+        "/services/Behavioral therapy Intervention and coaching for children.jpg",
+        "/services/behavioral therapy Family and environment support.jpg"
+      ]}
       sections={[
         {
           title: "Functional behavior analysis",

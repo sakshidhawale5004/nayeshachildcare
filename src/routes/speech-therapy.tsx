@@ -17,14 +17,18 @@ export const Route = createFileRoute("/speech-therapy")({
       eyebrow="Communication support"
       title="Speech therapy for confident communication."
       intro="Our speech-language pathologists help children develop clear communication skills through evidence-based therapy tailored to each child's unique needs."
-      image={images.specialtiesHeroImage}
+      image="/services/Speech therapy for confident communication..jpg"
       alt="Child engaged in speech therapy with therapist"
       highlights={[
         { title: "Language development", text: "Support for vocabulary, sentence building, and comprehension." },
         { title: "Clear articulation", text: "Help with speech clarity and sound production." },
         { title: "Functional communication", text: "Real-world skills for social interaction and connection." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/Comprehensive speech evaluation.jpg",
+        "/services/SPEECH THERAPY Targeted therapy sessions.jpg",
+        "/services/speech therapy Family coaching and carryover.jpg"
+      ]}
       sections={[
         {
           title: "Comprehensive speech evaluation",

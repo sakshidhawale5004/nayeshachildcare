@@ -17,14 +17,18 @@ export const Route = createFileRoute("/special-education")({
       eyebrow="Educational support"
       title="Special education for every learner."
       intro="We provide personalized educational support designed for children with learning differences, developmental needs, or other learning challenges."
-      image={images.specialtiesHeroImage}
+      image="/services/Special education for every learner..jpg"
       alt="Child engaged in specialized learning session"
       highlights={[
         { title: "Learning assessment", text: "Understanding your child's learning style and strengths." },
         { title: "Individualized instruction", text: "Teaching methods adapted to how your child learns best." },
         { title: "School support", text: "Collaboration with schools to ensure consistent learning support." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/Special education Comprehensive learning evaluation.jpg",
+        "/services/special education Personalized instruction.jpg",
+        "/services/Special education School collaboration and transition.jpg"
+      ]}
       sections={[
         {
           title: "Comprehensive learning evaluation",

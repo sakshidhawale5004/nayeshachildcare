@@ -17,14 +17,18 @@ export const Route = createFileRoute("/dance-therapy")({
       eyebrow="Movement and expression"
       title="Dance therapy for holistic development."
       intro="Dance and movement therapy uses creative expression and physical activity to support emotional wellbeing, body awareness, and social connection."
-      image={images.specialtiesHeroImage}
+      image="/services/Dance therapy for holistic development..jpg"
       alt="Child engaged in dance therapy movement"
       highlights={[
         { title: "Body awareness", text: "Developing coordination, balance, and physical confidence." },
         { title: "Emotional expression", text: "Creative ways to express feelings and build confidence." },
         { title: "Social connection", text: "Building relationships and social skills through shared movement." },
       ]}
-      visuals={[images.specialtiesNewbornsImage, images.specialtiesSchoolAgeImage, images.specialtiesAdolescentImage]}
+      visuals={[
+        "/services/Dance therapy for children Movement assessment.jpg",
+        "/services/Dance therapy for children Creative therapy sessions.jpg",
+        "/services/dance therapy Holistic wellbeing support for children.jpg"
+      ]}
       sections={[
         {
           title: "Movement assessment",
