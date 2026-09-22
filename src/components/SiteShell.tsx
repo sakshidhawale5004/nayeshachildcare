@@ -147,26 +147,33 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="footer-lead">
           <img src={brandLogo} alt="Nayesha Healthcare" />
           <p>Thoughtful pediatric care for every chapter of childhood.</p>
+          <div className="footer-contact">
+            <a href="tel:+912200000000">+91 22 0000 0000</a>
+            <a href="mailto:care@nayeshahealthcare.com">care@nayeshahealthcare.com</a>
+            <span>Mon–Sat · 8:00 – 20:00</span>
+          </div>
         </div>
+
         <div>
-          <strong>Explore care</strong>
+          <strong>Explore</strong>
           {afterServiceLinks.slice(0, 5).map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}
         </div>
+
         <div>
           <strong>Therapy services</strong>
           {serviceLinks.map(({ path, label }) => <Link key={path} to={path}>{label}</Link>)}
         </div>
+
         <div>
-          <strong>For families</strong>
+          <strong>Quick links</strong>
           {afterServiceLinks.slice(5).map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}
+          <Link to="/about">About us</Link>
+          <Link to="/doctors">Our doctors</Link>
         </div>
-        <div>
-          <strong>Care desk</strong>
-          <a href="tel:+912200000000">+91 22 0000 0000</a>
-          <a href="mailto:care@nayeshahealthcare.com">care@nayeshahealthcare.com</a>
-          <span>Mon–Sat · 8:00–20:00</span>
-        </div>
-        <p className="footer-note">© 2026 Nayesha Healthcare. Information is educational and does not replace medical advice.</p>
+
+        <p className="footer-note">
+          © 2026 Nayesha Healthcare. Information is educational and does not replace medical advice.
+        </p>
       </footer>
     </div>
   );
